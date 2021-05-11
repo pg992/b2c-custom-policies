@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="https://delfib2cstorage.blob.core.windows.net/b2c/bootstrap.min.css">
+    <style id="common">
+        
+        body, html, .container-fluid, .row, .left-panel {
+            height: 100%;
+        }
+
+        .register-title {
+            color: white;
+            margin: 122px 0 0 97px;
+            font-size: 24px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.17;
+            letter-spacing: normal;
+        }
+
+        .left-panel {
+            background-size: cover;
+            background-image: url('https://delfib2cstorage.blob.core.windows.net/b2c/1920%20Full%20picture.png');
+            height: 1240px;
+        }
+        
+        .ofmp-logo {
+            margin: 48px 0 0 64px;
+            width: 200px;
+            height: 70px;            
+        }
+
+        .register-menu-item > p {
+            width: 414px;
+            color: white;
+        }
+
+        .register-menu {
+            margin: 79px 0 0 96px;
+        }
+
+        .register-statement {
+            margin: 208px 0 0 139px;
+            width: 693px;
+        }
+
+        .register-statement > h1 {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .register-statement-desc {
+            margin: 24px 0 0 302px;
+        }
+
+        .register-statement-desc > h4 {
+            color: white;
+            text-align: left;
+        }
+
+        .hashtag {
+            margin: 60px 0 0 390px;
+        }
+
+        .hashtag > p {
+            color: #f7991c;
+            text-align: left;
+            font-family: Lato;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.3;
+            letter-spacing: normal;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        #panel {
+            border-left: 1px solid white;
+        }
+
+        #panel, .pageLevel, .panel li, label {
+            display: block;
+        }
+
+        .intro {
+            width: 450px;
+            height: 60px;
+            font-family: Roboto;
+            font-size: 28px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.14;
+            letter-spacing: 0.48px;
+            color: #272c39;
+        }
+
+        .attr ul {
+            padding-left:0;
+        }
+    </style>
+    <script src="https://delfib2cstorage.blob.core.windows.net/b2c/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 left-panel">
+                <img class="ofmp-logo" src="https://delfib2cstorage.blob.core.windows.net/b2c/Short_Horizontal_Logo_OFMP.png">
+                <h3 class="register-title">By registering, you will:</h3>
+                
+                <div class="register-menu">
+                    <div class="register-menu-item">
+                        <p> <img class="bullet-img" src="https://delfib2cstorage.blob.core.windows.net/b2c/ic-approved_2.png">  Order the oilfield products that you need to spot (securely paying by credit card, bank transfer, or PO).</p>
+                    </div>
+                    <div class="register-menu-item">
+                        <p> <img class="bullet-img" src="https://delfib2cstorage.blob.core.windows.net/b2c/ic-approved_2.png">  Access customer-specific pricing if/when it becomes available for your company (which is why it's important that you register with your business email).</p>
+                    </div>
+                    <div class="register-menu-item">
+                        <p> <img class="bullet-img" src="https://delfib2cstorage.blob.core.windows.net/b2c/ic-approved_2.png">  Easily make repeat purchases.</p>
+                    </div>
+                    <div class="register-menu-item">
+                        <p> <img class="bullet-img" src="https://delfib2cstorage.blob.core.windows.net/b2c/ic-approved_2.png">  Stay up-to-date with new products, sellers, and features added to the platform (remember to tick the newsletter box!).</p>
+                    </div>
+                </div>
+
+                <div class="register-statement">
+                    <h1>Ready to embrace commercial innovation in the E&P industry?</h1>
+                </div>
+
+                <div class="register-statement-desc">
+                    <h4>Take the first step today and sign up for free!</h4>
+                </div>
+
+                <div class="hashtag">
+                    <p>#CommercialEfficiency</p>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="panel" id="panel">
+                    <table class="panel_layout_row">
+                        <td id="panel_left"></td>
+                        <td id="panel_center">
+                            <div class="inner_container">
+                                <div class="api_container normaltext">
+                                    <div id="api"></div>
+                                </div>
+                            </div>
+                        </td>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".intro > p").remove();
+            $("#email_intro").remove();
+        });
+    </script>
+</body>
+</html>
