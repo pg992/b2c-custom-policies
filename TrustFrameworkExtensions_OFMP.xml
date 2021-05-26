@@ -1,18 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<TrustFrameworkPolicy 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-  xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" 
-  PolicySchemaVersion="0.3.0.0" 
-  TenantId="delfi.onmicrosoft.com" 
-  PolicyId="B2C_1A_TrustFrameworkExtensions_OFMP" 
-  PublicPolicyUri="http://delfi.onmicrosoft.com/B2C_1A_TrustFrameworkExtensions_OFMP">
-  
+<TrustFrameworkPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" PolicySchemaVersion="0.3.0.0" TenantId="delfi.onmicrosoft.com" PolicyId="B2C_1A_TrustFrameworkExtensions_OFMP" PublicPolicyUri="http://delfi.onmicrosoft.com/B2C_1A_TrustFrameworkExtensions_OFMP" TenantObjectId="0ee6db76-98a8-4e5c-b55b-6b687e3ca72f">
   <BasePolicy>
     <TenantId>delfi.onmicrosoft.com</TenantId>
     <PolicyId>B2C_1A_TrustFrameworkBase_OFMP</PolicyId>
   </BasePolicy>
-
   <!-- Start -> Building blocks for Send Grid Email Verification -->
   <BuildingBlocks>
     <ClaimsSchema>
@@ -47,7 +37,6 @@
         <DataType>string</DataType>
       </ClaimType>
     </ClaimsSchema>
-
     <ClaimsTransformations>
       <ClaimsTransformation Id="GetLocalizedStringsForEmail" TransformationMethod="GetLocalizedStringsTransformation">
         <OutputClaims>
@@ -77,12 +66,11 @@
         </OutputClaims>
       </ClaimsTransformation>
     </ClaimsTransformations>
-
     <ContentDefinitions>
       <ContentDefinition Id="api.localaccountsignup">
         <!-- <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:2.1.0</DataUri> -->
         <!-- <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:2.1.0</DataUri> -->
-          <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:2.1.2</DataUri>
+        <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:2.1.2</DataUri>
         <LocalizedResourcesReferences MergeBehavior="Prepend">
           <LocalizedResourcesReference Language="en" LocalizedResourcesReferenceId="api.custom-email.en" />
           <LocalizedResourcesReference Language="es" LocalizedResourcesReferenceId="api.custom-email.es" />
@@ -91,14 +79,13 @@
       <ContentDefinition Id="api.localaccountpasswordreset">
         <!-- <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:2.1.0</DataUri> -->
         <!-- <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:1.2.0</DataUri> -->
-          <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:2.1.2</DataUri>
+        <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:2.1.2</DataUri>
         <LocalizedResourcesReferences MergeBehavior="Prepend">
           <LocalizedResourcesReference Language="en" LocalizedResourcesReferenceId="api.custom-email.en" />
           <LocalizedResourcesReference Language="es" LocalizedResourcesReferenceId="api.custom-email.es" />
         </LocalizedResourcesReferences>
       </ContentDefinition>
     </ContentDefinitions>
-
     <Localization Enabled="true">
       <SupportedLanguages DefaultLanguage="en" MergeBehavior="Append">
         <SupportedLanguage>en</SupportedLanguage>
@@ -154,7 +141,6 @@
         </LocalizedStrings>
       </LocalizedResources>
     </Localization>
-
     <DisplayControls>
       <DisplayControl Id="emailVerificationControl" UserInterfaceControlType="VerificationControl">
         <DisplayClaims>
@@ -210,12 +196,9 @@
         </Actions>
       </DisplayControl>
     </DisplayControls>
-
   </BuildingBlocks>
   <!-- End -> Building blocks for Send Grid Email Verification -->
-
   <ClaimsProviders>
-
     <!-- Start Claim Provider for Send Grid Email Verification -->
     <ClaimsProvider>
       <DisplayName>One time password technical profiles</DisplayName>
@@ -252,7 +235,6 @@
       </TechnicalProfiles>
     </ClaimsProvider>
     <!-- End Claim Provider for Send Grid Email Verification -->
-
     <!-- Start Claim Provider for Send Grid Email Verification -->
     <ClaimsProvider>
       <DisplayName>RestfulProvider</DisplayName>
@@ -279,7 +261,6 @@
       </TechnicalProfiles>
     </ClaimsProvider>
     <!-- End Claim Provider for Send Grid Email Verification -->
-
     <!-- Start Claim Provider for Send Grid Email Verification -->
     <ClaimsProvider>
       <DisplayName>Local Account</DisplayName>
@@ -290,7 +271,8 @@
           </InputClaimsTransformations>
           <DisplayClaims>
             <DisplayClaim DisplayControlReferenceId="emailVerificationControl" />
-            <!-- <DisplayClaim ClaimTypeReferenceId="displayName" Required="true" /> --> <!-- Not needed, removed -->
+            <!-- <DisplayClaim ClaimTypeReferenceId="displayName" Required="true" /> -->
+            <!-- Not needed, removed -->
             <DisplayClaim ClaimTypeReferenceId="givenName" Required="true" />
             <DisplayClaim ClaimTypeReferenceId="surName" Required="true" />
             <DisplayClaim ClaimTypeReferenceId="extension_CompanyName" Required="true" />
@@ -318,11 +300,10 @@
       </TechnicalProfiles>
     </ClaimsProvider>
     <!-- End Claim Provider for Send Grid Email Verification -->
-
     <ClaimsProvider>
       <DisplayName>Local Account SignIn</DisplayName>
       <TechnicalProfiles>
-         <TechnicalProfile Id="login-NonInteractive">
+        <TechnicalProfile Id="login-NonInteractive">
           <Metadata>
             <Item Key="client_id">c19c5fc6-9849-437f-91d3-84d9a38a6131</Item>
             <Item Key="IdTokenAudience">7b0e8f4c-a36c-4ede-be1a-915804f48495</Item>
@@ -334,11 +315,8 @@
         </TechnicalProfile>
       </TechnicalProfiles>
     </ClaimsProvider>
-
   </ClaimsProviders>
-
-    <!--UserJourneys>
+  <!--UserJourneys>
 	
 	</UserJourneys-->
-
 </TrustFrameworkPolicy>
